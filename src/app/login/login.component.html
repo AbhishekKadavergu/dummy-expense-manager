@@ -1,0 +1,30 @@
+<div class="login">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter Email" formControlName="email">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Enter Password" formControlName="password">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+        <!-- <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">
+    
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName"> -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Login</button>
+
+    </form>
+
+    <p>New user? Please click <a routerLink="/register">here</a> to register</p>
+</div>

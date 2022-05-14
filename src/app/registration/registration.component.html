@@ -1,0 +1,47 @@
+<div class="login">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput placeholder="Enter Name" formControlName="name">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Enter Email" formControlName="email">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput placeholder="Enter Password" formControlName="password">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Age</mat-label>
+                <input type="number" matInput placeholder="Enter Age" formControlName="age">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+        <!-- <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">
+    
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName"> -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Register</button>
+
+    </form>
+</div>

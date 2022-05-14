@@ -1,0 +1,40 @@
+<div class="login">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input type="number" matInput placeholder="Enter Amount" formControlName="amount">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+                <input type="text" matInput placeholder="Enter Category" formControlName="category">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+
+
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Date</mat-label>
+                <input type="date" matInput placeholder="Enter Date" formControlName="date">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </p>
+        <!-- <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">
+    
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName"> -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Create Expense</button>
+
+    </form>
+</div>
